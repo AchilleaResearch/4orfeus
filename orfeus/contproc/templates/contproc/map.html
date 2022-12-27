@@ -1,0 +1,48 @@
+{% extends 'contproc/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Select map view</h4>
+                    <form action="{% url 'map' %}" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row align-items-center mt-3">
+                            <div class="col-2 text-end"><label class="col-form-label">Topology:</label></div>
+                            <div class="col">
+                                {{ form.maps }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary mt-3">Show Map</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col text-center align-self-center">
+                            <div class="text-center" id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'contproc/plotly-2.12.1.min.js' %}"></script>
+    <script>
+        var plotly_map = JSON.parse('{{ plotly_map|escapejs }}');
+    </script>
+    <script src="{% static 'contproc/map.js' %}"></script>
+{% endblock %}

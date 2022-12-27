@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ORFEUSx</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'contproc/favicon.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'contproc/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'contproc/Footer-Basic-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'contproc/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'contproc/bootstrap-table.min.css' %}">
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row align-items-baseline mb-3">
+                    <div class="col-1 d-md-flex"><a class="align-items-md-center" href="http://achillearesearch.com"><img src="{% static 'contproc/LogoPg6.png' %}" width="100%" style="min-width: 40px;"></a></div>
+                    <div class="col">
+                        <nav class="navbar navbar-light navbar-expand-md">
+                            <div class="container-fluid">
+                                <a class="navbar-brand align-text-bottom" href="{% url 'index' %}">ORFEUSx</a>
+                                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2">
+                                    <span class="visually-hidden">Toggle navigation</span>
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navcol-2">
+                                    <div>
+                                        {% if user.is_authenticated %}
+                                            Signed in as <strong>{{ user.username }}</strong>.
+                                        {% else %}
+                                            Not signed in.
+                                        {% endif %}
+                                    </div>
+                                    <ul class="navbar-nav d-md-flex ms-auto align-items-md-center align-items-lg-center">
+                                        <li class="nav-item"></li>
+                                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown">System Data</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="{% url 'index' %}">View Systems</a>
+                                                <a class="dropdown-item" href="{% url 'index' %}">Add System</a>
+                                                <a class="dropdown-item" href="{% url 'index' %}">Add Bus Coordinates</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown">Analysis</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="{% url 'index' %}">Add N-0 Solution Set</a>
+                                                <a class="dropdown-item" href="{% url 'index' %}">Define Analyses</a>
+                                                <a class="dropdown-item" href="{% url 'index' %}">Run Analysis</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown">Results</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="{% url 'index' %}">Risk Charts</a>
+                                                <a class="dropdown-item" href="{% url 'map' %}">Map Views</a>
+                                            </div>
+                                        </li>
+                                        {% if user.is_authenticated %}
+                                            <li class="nav-item"></li>
+                                            <li class="nav-item d-lg-flex"><a class="nav-link active d-md-flex align-items-md-center align-items-lg-center" id="logout" href="{% url 'logout' %}">Logout&nbsp;</a></li>
+                                        {% else %}
+                                            <li class="nav-item"></li>
+                                            <li class="nav-item d-lg-flex"><a class="nav-link active d-md-flex align-items-md-center align-items-lg-center" id="login" href="{% url 'login' %}">Login&nbsp;</a></li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                {% block body %}
+                {% endblock %}
+                <div class="row">
+                    <div class="col">
+                        <footer class="text-center">
+                            <div class="container text-muted py-4 py-lg-5">
+                                <p class="mb-0">Copyright © 2022 Achillea Research, Inc.</p>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'contproc/bootstrap.min.js' %}"></script>
+    <script src="{% static 'contproc/jquery-3.6.0.min.js' %}"></script>
+    {% block script %}
+    {% endblock %}
+</body>
+
+</html>
+

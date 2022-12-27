@@ -1,0 +1,40 @@
+andes @ file:///D:/bld/andes_1602463291597/work
+asgiref @ file:///home/conda/feedstock_root/build_artifacts/asgiref_1671589829431/work
+backports.zoneinfo @ file:///D:/bld/backports.zoneinfo_1655749884194/work
+Bottleneck @ file:///D:/bld/bottleneck_1656803878615/work
+certifi==2022.12.7
+colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1666700638685/work
+coloredlogs @ file:///home/conda/feedstock_root/build_artifacts/coloredlogs_1643220139154/work
+cvxopt==1.3.0
+cycler @ file:///home/conda/feedstock_root/build_artifacts/cycler_1635519461629/work
+dill @ file:///home/conda/feedstock_root/build_artifacts/dill_1666603105584/work
+Django @ file:///home/conda/feedstock_root/build_artifacts/django_1670415647940/work
+django-crispy-forms @ file:///home/conda/feedstock_root/build_artifacts/django-crispy-forms_1643108807664/work
+humanfriendly @ file:///D:/bld/humanfriendly_1667489925852/work
+kiwisolver @ file:///D:/bld/kiwisolver_1657953191714/work
+matplotlib @ file:///D:/bld/matplotlib-base_1594091905736/work
+mkl-service==2.4.0
+mpmath @ file:///home/conda/feedstock_root/build_artifacts/mpmath_1612895720168/work
+multiprocess @ file:///C:/b/abs_ca0rg6wl6_/croot/multiprocess_1668006439310/work
+numexpr @ file:///C:/b/abs_a7kbak88hk/croot/numexpr_1668713882979/work
+numpy @ file:///D:/bld/numpy_1653325737787/work
+packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1670530880680/work
+pandas @ file:///C:/b/abs_cdcgk91igc/croots/recipe/pandas_1663772960432/work
+pathos @ file:///home/conda/feedstock_root/build_artifacts/pathos_1666612980302/work
+pox @ file:///home/conda/feedstock_root/build_artifacts/pox_1666592868822/work
+ppft @ file:///home/conda/feedstock_root/build_artifacts/ppft_1666592874911/work
+pyparsing @ file:///home/conda/feedstock_root/build_artifacts/pyparsing_1652235407899/work
+pyreadline3 @ file:///D:/bld/pyreadline3_1667417265736/work
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateutil_1626286286081/work
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1671365381334/work
+PyYAML @ file:///D:/bld/pyyaml_1648757284286/work
+scipy @ file:///C:/bld/scipy_1658811113862/work
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+sqlparse @ file:///home/conda/feedstock_root/build_artifacts/sqlparse_1663990453245/work
+sympy==1.5.1
+tornado @ file:///D:/bld/tornado_1656937958156/work
+tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1662214488106/work
+typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1665144421445/work
+wincertstore==0.2
+xlrd @ file:///home/conda/feedstock_root/build_artifacts/xlrd_1610224409810/work
+XlsxWriter @ file:///home/conda/feedstock_root/build_artifacts/xlsxwriter_1645975313810/work
