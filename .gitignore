@@ -1,6 +1,9 @@
 # Project specific folders
 scenario_example/
 tamu/
+logs/
+plots/
+output/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
