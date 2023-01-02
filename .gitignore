@@ -1,5 +1,6 @@
 # Project specific folders
-scenario_example
+scenario_example/
+tamu/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
