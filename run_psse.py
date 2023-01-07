@@ -1,3 +1,10 @@
+import os
+import sys
+
+PSSE_LOCATION = r"C:\Program Files\PTI\PSSE35\35.5\PSSPY39"
+sys.path.append(PSSE_LOCATION)
+os.environ['PATH'] = os.environ['PATH'] + ';' +  PSSE_LOCATION
+
 # JZB20220102 Experimenting with PSS/E's python API
 import psse35
 psse35.set_minor(5)
@@ -6,6 +13,7 @@ exam_path = psse35.EXAM_PATH
 # The following are compiled python files (.pyc) so pylance cannot resolve the imports
 import psspy
 import excelpy
+psspy.param.throwPsseExceptions = True
 psspy.psseinit()
 
 # Read RAW file and solve
